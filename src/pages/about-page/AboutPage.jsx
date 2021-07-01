@@ -8,7 +8,7 @@ import React from 'react'
 export default function AboutPage() {
     return (
         <div>
-            AboutPage
+            <h1>AboutPage</h1>
         </div>
     )
 }
