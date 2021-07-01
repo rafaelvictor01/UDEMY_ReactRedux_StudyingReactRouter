@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import AboutPage from '../../pages/about-page/AboutPage'
+import NotFoundPage from '../../pages/errors/not-found-page/NotFoundPage'
 import HomePage from '../../pages/home-page/HomePage'
 import ParamPage from '../../pages/param-page/ParamPage'
 
@@ -18,6 +19,7 @@ export default function Content() {
                 <Route exact path={'/'} component={HomePage} />
                 <Route path={'/about'} component={AboutPage} />
                 <Route path={'/param/:something'} component={ParamPage} />
+                <Route path={'*'} component={NotFoundPage} />
             </Switch>
         </div>
     )
