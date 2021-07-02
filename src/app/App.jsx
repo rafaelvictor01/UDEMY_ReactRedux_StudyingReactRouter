@@ -1,9 +1,8 @@
 import React from 'react'
-import Content from '../components/content/Content'
-import MainMenu from '../components/main-menu/MainMenu'
+import MainMenuCP from '../components/main-menu/MainMenuCP'
 import { BrowserRouter } from 'react-router-dom'
-
-import './App.css'
+import styled from 'styled-components'
+import AppSwitchContentCP from '../components/app-switch-content/AppSwitchContentCP'
 
 /**
  * Componente com maior grau de abstração da aplicação.
@@ -12,11 +11,16 @@ import './App.css'
  */
 export default function App() {
     return (
-        <div className={'App'}>
+        <AppStyleWrapperSCP>
             <BrowserRouter>
-                <MainMenu />
-                <Content />
+                <MainMenuCP />
+                <AppSwitchContentCP />
             </BrowserRouter>
-        </div>
+        </AppStyleWrapperSCP>
     )
 }
+
+const AppStyleWrapperSCP = styled.div`
+    display: flex;
+    height: 100vh;
+`
